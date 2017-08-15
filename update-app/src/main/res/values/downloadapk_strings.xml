@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="download_apk_downloading">Downloading...</string>
+    <string name="download_apk_download_success">Download Success</string>
+    <string name="download_apk_download_failed">Download Failed</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.smartbetter.android.updateapp">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application android:allowBackup="true"
+        android:supportsRtl="true">
+        <service
+            android:name="net.smartbetter.android.updateapp.DownloadApkService"
+            android:enabled="true"
+            android:exported="true" />
+        <!--解决Android7更新APK在安装时报错 android.os.FileUriExposedException:file:///storage/
+            emulated/0/Download/example.apk exposed beyond app through Intent.getData()的问题-->
+        <provider android:name="android.support.v4.content.FileProvider"
+            android:authorities="net.smartbetter.android.updateapp.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+    </application>
+</manifest>

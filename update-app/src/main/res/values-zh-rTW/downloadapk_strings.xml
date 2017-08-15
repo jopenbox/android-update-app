@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="download_apk_downloading">下載中...</string>
+    <string name="download_apk_download_success">下載完成</string>
+    <string name="download_apk_download_failed">下載失敗</string>
+</resources>
